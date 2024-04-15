@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Snake</title>
+  <style>
+    body{
+      background-color:#FBD786;
+    }
+    .canvas{
+      background-color: #fff;
+      border: 3px solid black;
+    }
+    .container{
+      width: 1260px;
+      height: 100%;
+      margin: auto;
+    }
+    .main{
+      width: 100%;
+      margin: auto;
+      text-align: center;
+      position: relative;
+    }
+    .score{
+      text-align: center;
+      font-size: 40px;
+    }
+    .button-area{
+      margin-top: 40px;
+      width: 100%;
+      text-align: center;
+    }
+    .button-start{
+      cursor: pointer;
+      font-size: 40px;
+      border: 1px solid #000;
+      background-color: #fff;
+    }
+    .finish{
+      display: none;
+      color: #fff;
+      font-size: 40px;
+      position: absolute;
+      top: 140px;
+      bottom: 0;
+      left: 0;
+      right: 0;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <p id="score-id" class="score">0</p>
+    <div class="main">
+      <canvas class="canvas" id="canvas-id" width="400" height="400"></canvas>
+      <p class="finish" id="end-word">Game Over</p>
+    </div>
+    <div class="button-area">
+      <button onclick="gameStart()" class="button-start" id="start-button">開始遊戲</button>
+    </div>
+  </div>
+</body>
+<script src="routine.js"></script>
+</html>
